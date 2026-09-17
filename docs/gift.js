@@ -1,6 +1,7 @@
 const giftButton = document.querySelector(".gift-button");
 const countLabel = document.querySelector("[data-count]");
 const notes = ["spark", "wish", "smile", "almost", "ready"];
+const requiredTaps = 100;
 let giftTaps = 0;
 
 function showNote(text, x, y) {
@@ -18,9 +19,9 @@ giftButton.addEventListener("click", (event) => {
   countLabel.textContent = giftTaps.toString();
   giftButton.classList.remove("pulse");
   window.requestAnimationFrame(() => giftButton.classList.add("pulse"));
-  showNote(notes[giftTaps - 1], event.clientX, event.clientY);
+  showNote(notes[(giftTaps - 1) % notes.length], event.clientX, event.clientY);
 
-  if (giftTaps === 5) {
+  if (giftTaps >= requiredTaps) {
     giftButton.disabled = true;
     document.body.classList.add("leaving");
     window.setTimeout(() => window.location.assign("./wish.html"), 520);
