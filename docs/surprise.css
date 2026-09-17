@@ -49,12 +49,31 @@
   background: var(--gold);
   color: #27170d;
   box-shadow: 0 0.8rem 1.8rem rgba(255, 211, 110, 0.24);
+  transition:
+    min-width 220ms ease,
+    min-height 220ms ease,
+    font-size 220ms ease,
+    left 220ms ease,
+    transform 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .yes-button.is-confirming {
-  min-width: min(17rem, 82%);
   left: 50%;
   transform: translateX(-50%);
+}
+
+.yes-button.confirmation-one {
+  min-width: min(18rem, 86%);
+  min-height: 4.25rem;
+  font-size: clamp(1.05rem, 5vw, 1.3rem);
+}
+
+.yes-button.confirmation-two {
+  min-width: min(21rem, 94%);
+  min-height: 5.25rem;
+  font-size: clamp(1.25rem, 6vw, 1.6rem);
+  box-shadow: 0 1rem 2.8rem rgba(255, 211, 110, 0.42);
 }
 
 .no-button {

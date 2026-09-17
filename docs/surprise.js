@@ -35,6 +35,8 @@ yesButton.addEventListener("click", () => {
   if (confirmationStep < confirmations.length) {
     yesButton.textContent = confirmations[confirmationStep];
     yesButton.classList.add("is-confirming");
+    yesButton.classList.toggle("confirmation-one", confirmationStep === 0);
+    yesButton.classList.toggle("confirmation-two", confirmationStep === 1);
     teaseText.textContent = confirmationStep === 0 ? "Sure ke ni?" : "Last confirmation!";
     confirmationStep += 1;
     return;
