@@ -13,17 +13,20 @@
     <main class="app" aria-live="polite">
       <section class="stage intro active">
         <div class="spark-field" aria-hidden="true"></div>
-        <div class="intro-card">
-          <p class="eyebrow">A little secret is waiting</p>
-          <h1>Type hello</h1>
-          <form class="hello-form" autocomplete="off">
-            <label for="helloInput">The magic word</label>
-            <div class="input-row">
-              <input id="helloInput" name="hello" type="text" inputmode="text" placeholder="hello" aria-describedby="introHint" />
-              <button type="submit">Unlock</button>
-            </div>
-            <p id="introHint" class="hint">Lowercase works best. The page is listening.</p>
-          </form>
+        <div class="birthday-shell">
+          <h1 class="birthday-title">Happy Birthday</h1>
+          <div class="intro-card">
+            <p class="eyebrow">One little check first</p>
+            <h2>Okay cer tulis apa nama awak saya save dalam phone saya</h2>
+            <form class="hello-form" autocomplete="off">
+              <label for="nameInput">Nama awak</label>
+              <div class="input-row">
+                <input id="nameInput" name="name" type="text" inputmode="text" placeholder="Tulis nama awak" aria-describedby="introHint" />
+                <button type="submit">Check</button>
+              </div>
+              <p id="introHint" class="hint" aria-live="polite"></p>
+            </form>
+          </div>
         </div>
       </section>
     </main>
