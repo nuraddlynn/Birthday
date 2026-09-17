@@ -7,6 +7,7 @@ An interactive, mobile-friendly birthday surprise website.
 All website files live in `dist/` and each page has its own HTML, CSS, and JavaScript file:
 
 - `home.html`, `home.css`, `home.js` - type `hello` to begin
+- `surprise.html`, `surprise.css`, `surprise.js` - playful surprise question and flower popup
 - `gift.html`, `gift.css`, `gift.js` - tap the birthday gift
 - `wish.html`, `wish.css`, `wish.js` - choose a wish
 - `cake.html`, `cake.css`, `cake.js` - blow out the candle

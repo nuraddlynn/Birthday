@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nak Surprise? | Birthday Surprise</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23131b3a'/%3E%3Cpath d='M18 30h28v22H18z' fill='%23ffcf66'/%3E%3Cpath d='M14 24h36v10H14z' fill='%23ff6f91'/%3E%3Cpath d='M32 24v28' stroke='%23131b3a' stroke-width='4'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./surprise.css" />
+    <script src="./surprise.js" defer></script>
+  </head>
+  <body>
+    <main class="app" aria-live="polite">
+      <section class="stage surprise-stage active">
+        <div class="spark-field" aria-hidden="true"></div>
+        <div class="surprise-copy">
+          <p class="eyebrow">Important question</p>
+          <h1>Nak surprise takkk?</h1>
+          <p class="tease-text" data-tease-text>Pilih betul-betul tau.</p>
+        </div>
+
+        <div class="choice-arena" aria-label="Surprise choices">
+          <button class="yes-button" type="button">Nakkkk</button>
+          <button class="no-button" type="button">Taknakkkkk</button>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="flower-dialog" aria-labelledby="flowerTitle">
+      <div class="flower-preview" aria-hidden="true">&#128144;</div>
+      <p class="eyebrow">Okay, confirmed!</p>
+      <h2 id="flowerTitle">Bunga untuk awak</h2>
+      <p class="flower-note">Gambar bunga 3D awak akan muncul dekat sini nanti.</p>
+      <button class="continue-button" type="button">Sambung surprise</button>
+    </dialog>
+  </body>
+</html>

@@ -9,7 +9,7 @@ helloForm.addEventListener("submit", (event) => {
   if (value === "hello") {
     hint.textContent = "Door opened.";
     document.body.classList.add("leaving");
-    window.setTimeout(() => window.location.assign("./gift.html"), 420);
+    window.setTimeout(() => window.location.assign("./surprise.html"), 420);
     return;
   }
 
