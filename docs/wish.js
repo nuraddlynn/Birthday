@@ -1,6 +1,10 @@
 const loveBoxes = Array.from(document.querySelectorAll("[data-love]"));
 const finalBox = document.querySelector(".final-box");
 const finalIcon = document.querySelector("[data-final-icon]");
+const photoDialog = document.querySelector(".photo-dialog");
+const memoryPhoto = document.querySelector(".memory-photo");
+const photoCaption = document.querySelector("#photoCaption");
+const photoContinue = document.querySelector(".photo-continue");
 const videoDialog = document.querySelector(".video-dialog");
 const memoryVideo = document.querySelector(".memory-video");
 const videoContinue = document.querySelector(".video-continue");
@@ -10,22 +14,27 @@ let videoOpened = false;
 
 loveBoxes.forEach((button) => {
   button.addEventListener("click", () => {
-    if (button.classList.contains("opened")) {
-      return;
+    if (!button.classList.contains("opened")) {
+      button.classList.add("opened");
+      button.setAttribute("aria-label", `${button.dataset.caption}. Tekan untuk tengok lagi`);
+      openedBoxes += 1;
+
+      if (openedBoxes === loveBoxes.length) {
+        finalBox.disabled = false;
+        finalBox.classList.add("unlocked");
+        finalBox.setAttribute("aria-label", "Buka video terakhir");
+        finalIcon.textContent = "\uD83D\uDD13";
+      }
     }
 
-    button.classList.add("opened");
-    button.setAttribute("aria-label", button.dataset.openLabel || "Love sudah dibuka");
-    openedBoxes += 1;
-
-    if (openedBoxes === loveBoxes.length) {
-      finalBox.disabled = false;
-      finalBox.classList.add("unlocked");
-      finalBox.setAttribute("aria-label", "Buka video terakhir");
-      finalIcon.textContent = "\uD83D\uDD13";
-    }
+    memoryPhoto.src = button.dataset.image;
+    memoryPhoto.alt = button.dataset.imageAlt;
+    photoCaption.textContent = button.dataset.caption;
+    photoDialog.showModal();
   });
 });
+
+photoContinue.addEventListener("click", () => photoDialog.close());
 
 finalBox.addEventListener("click", () => {
   if (finalBox.disabled) {
