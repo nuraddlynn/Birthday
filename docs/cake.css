@@ -4,3 +4,67 @@
   min-height: 1.6rem;
   color: var(--gold);
 }
+
+.candle-stage .scene-copy h1 {
+  font-size: clamp(2rem, 8vw, 4.4rem);
+}
+
+.saturday-dialog {
+  width: min(94vw, 44rem);
+  max-height: 92svh;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: clamp(0.9rem, 4vw, 1.4rem);
+  background: #111936;
+  color: var(--ink);
+  text-align: center;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.52);
+}
+
+.saturday-dialog::backdrop {
+  background: rgba(4, 7, 18, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.saturday-dialog[open] {
+  animation: surpriseIn 360ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+
+.saturday-dialog img {
+  display: block;
+  width: 100%;
+  max-height: 66svh;
+  border-radius: 6px;
+  background: #050711;
+  object-fit: contain;
+}
+
+.saturday-dialog p {
+  margin: 0.9rem auto;
+  color: var(--ink);
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.saturday-continue {
+  width: 100%;
+  min-height: 3.2rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--mint);
+  color: #092217;
+  font-weight: 900;
+}
+
+@keyframes surpriseIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

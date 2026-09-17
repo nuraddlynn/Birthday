@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Make a Wish | Birthday Surprise</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23131b3a'/%3E%3Cpath d='M18 30h28v22H18z' fill='%23ffcf66'/%3E%3Cpath d='M14 24h36v10H14z' fill='%23ff6f91'/%3E%3Cpath d='M32 24v28' stroke='%23131b3a' stroke-width='4'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./cake.css" />
-    <script src="./cake.js" defer></script>
+    <link rel="stylesheet" href="./cake.css?v=2" />
+    <script src="./cake.js?v=2" defer></script>
   </head>
   <body>
     <main class="app" aria-live="polite">
       <section class="stage candle-stage active">
         <div class="scene-copy">
-          <p class="eyebrow">Step 3</p>
-          <h1>Make a wish, then blow the candle</h1>
-          <p class="chosen-wish" data-chosen-wish></p>
+          <h1>Tiup dulu lilinn tuu, ada surprise lainn</h1>
+          <p class="chosen-wish">i love youuu</p>
         </div>
         <button class="cake-button" type="button" aria-label="Blow the candle">
           <span class="flame"></span>
@@ -24,5 +23,11 @@
         </button>
       </section>
     </main>
+
+    <dialog class="saturday-dialog" aria-labelledby="saturdayCaption">
+      <img src="./assets/saturday-surprise.jpeg" alt="Hadiah surprise hari Sabtu" />
+      <p id="saturdayCaption">hehehehhe tunggu eh sabtuu nii</p>
+      <button class="saturday-continue" type="button">Sambung</button>
+    </dialog>
   </body>
 </html>

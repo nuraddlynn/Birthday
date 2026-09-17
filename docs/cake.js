@@ -1,10 +1,17 @@
 const cakeButton = document.querySelector(".cake-button");
-const chosenWish = document.querySelector("[data-chosen-wish]");
-
-chosenWish.textContent = sessionStorage.getItem("birthdayWish") || "A year full of gentle surprises.";
+const saturdayDialog = document.querySelector(".saturday-dialog");
+const saturdayContinue = document.querySelector(".saturday-continue");
 
 cakeButton.addEventListener("click", () => {
   cakeButton.disabled = true;
   cakeButton.classList.add("blown");
-  window.setTimeout(() => window.location.assign("./finale.html"), 540);
+  window.setTimeout(() => saturdayDialog.showModal(), 440);
+});
+
+saturdayDialog.addEventListener("cancel", (event) => event.preventDefault());
+
+saturdayContinue.addEventListener("click", () => {
+  saturdayDialog.close();
+  document.body.classList.add("leaving");
+  window.setTimeout(() => window.location.assign("./finale.html"), 360);
 });
