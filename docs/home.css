@@ -16,9 +16,15 @@
   animation: pageIn 520ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
 }
 
+.intro-card .eyebrow {
+  margin-bottom: 0.9rem;
+  font-size: clamp(1.65rem, 5vw, 2.35rem);
+  line-height: 1;
+}
+
 .intro-card h2 {
-  font-size: clamp(1.35rem, 4vw, 2rem);
-  line-height: 1.2;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  line-height: 1.35;
 }
 
 .hello-form {
@@ -28,10 +34,4 @@
 .hint {
   color: var(--rose);
   font-weight: 700;
-}
-
-@media (max-width: 560px) {
-  .intro-card h2 {
-    font-size: 1.3rem;
-  }
 }
