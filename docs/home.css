@@ -6,21 +6,12 @@
 
 .birthday-shell {
   z-index: 2;
-  display: grid;
-  gap: clamp(1rem, 3vh, 1.6rem);
-  width: min(100%, 42rem);
+  width: min(100%, 32rem);
   text-align: center;
 }
 
-.birthday-title {
-  color: var(--gold);
-  font-size: clamp(3.2rem, 10vw, 7rem);
-  line-height: 0.9;
-  text-shadow: 0 0 2.5rem rgba(255, 211, 110, 0.28);
-}
-
 .intro-card {
-  justify-self: center;
+  width: 100%;
   padding: clamp(1rem, 4vw, 1.6rem);
   animation: pageIn 520ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
 }
@@ -40,14 +31,6 @@
 }
 
 @media (max-width: 560px) {
-  .birthday-shell {
-    gap: 1rem;
-  }
-
-  .birthday-title {
-    font-size: clamp(3rem, 17vw, 4.6rem);
-  }
-
   .intro-card h2 {
     font-size: 1.3rem;
   }
