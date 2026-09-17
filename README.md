@@ -13,5 +13,3 @@ All website files live in `dist/` and each page has its own HTML, CSS, and JavaS
 - `finale.html`, `finale.css`, `finale.js` - birthday finale and confetti
 - `shared.css` - visual styles shared by every page
 - `index.html` - website entry point that opens `home.html`
-
-The hidden `.openai/hosting.json` file only connects this repository to Sites hosting. It is not part of the visible website.
