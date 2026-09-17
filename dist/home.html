@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Birthday Surprise</title>
+    <meta name="description" content="A playful birthday surprise full of little reveals and wishes." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23131b3a'/%3E%3Cpath d='M18 30h28v22H18z' fill='%23ffcf66'/%3E%3Cpath d='M14 24h36v10H14z' fill='%23ff6f91'/%3E%3Cpath d='M32 24v28' stroke='%23131b3a' stroke-width='4'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./home.css" />
+    <script src="./home.js" defer></script>
+  </head>
+  <body>
+    <main class="app" aria-live="polite">
+      <section class="stage intro active">
+        <div class="spark-field" aria-hidden="true"></div>
+        <div class="intro-card">
+          <p class="eyebrow">A little secret is waiting</p>
+          <h1>Type hello</h1>
+          <form class="hello-form" autocomplete="off">
+            <label for="helloInput">The magic word</label>
+            <div class="input-row">
+              <input id="helloInput" name="hello" type="text" inputmode="text" placeholder="hello" aria-describedby="introHint" />
+              <button type="submit">Unlock</button>
+            </div>
+            <p id="introHint" class="hint">Lowercase works best. The page is listening.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

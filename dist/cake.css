@@ -1,0 +1,6 @@
+@import url("./shared.css");
+
+.chosen-wish {
+  min-height: 1.6rem;
+  color: var(--gold);
+}

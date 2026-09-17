@@ -1,0 +1,28 @@
+const giftButton = document.querySelector(".gift-button");
+const countLabel = document.querySelector("[data-count]");
+const notes = ["spark", "wish", "smile", "almost", "ready"];
+let giftTaps = 0;
+
+function showNote(text, x, y) {
+  const note = document.createElement("span");
+  note.className = "float-note";
+  note.textContent = text;
+  note.style.setProperty("--x", `${Math.min(x, window.innerWidth - 96)}px`);
+  note.style.setProperty("--y", `${Math.max(24, y)}px`);
+  document.body.append(note);
+  note.addEventListener("animationend", () => note.remove(), { once: true });
+}
+
+giftButton.addEventListener("click", (event) => {
+  giftTaps += 1;
+  countLabel.textContent = giftTaps.toString();
+  giftButton.classList.remove("pulse");
+  window.requestAnimationFrame(() => giftButton.classList.add("pulse"));
+  showNote(notes[giftTaps - 1], event.clientX, event.clientY);
+
+  if (giftTaps === 5) {
+    giftButton.disabled = true;
+    document.body.classList.add("leaving");
+    window.setTimeout(() => window.location.assign("./wish.html"), 520);
+  }
+});

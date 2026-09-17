@@ -33,6 +33,11 @@ body {
     linear-gradient(160deg, var(--night), var(--night-deep));
   color: var(--ink);
   overflow: hidden;
+  transition: opacity 320ms ease;
+}
+
+body.leaving {
+  opacity: 0;
 }
 
 button,
@@ -452,6 +457,18 @@ input:focus {
   to {
     opacity: 0;
     transform: translateY(-3.6rem) scale(1);
+  }
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
