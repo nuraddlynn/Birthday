@@ -4,7 +4,9 @@ const finalIcon = document.querySelector("[data-final-icon]");
 const videoDialog = document.querySelector(".video-dialog");
 const memoryVideo = document.querySelector(".memory-video");
 const videoContinue = document.querySelector(".video-continue");
+const comeHereButton = document.querySelector(".come-here-button");
 let openedBoxes = 0;
+let videoOpened = false;
 
 loveBoxes.forEach((button) => {
   button.addEventListener("click", () => {
@@ -30,6 +32,14 @@ finalBox.addEventListener("click", () => {
     return;
   }
 
+  if (!videoOpened) {
+    videoOpened = true;
+    finalBox.classList.add("opened");
+    finalBox.setAttribute("aria-label", "Video sudah dibuka");
+    comeHereButton.hidden = false;
+    window.requestAnimationFrame(() => comeHereButton.classList.add("show"));
+  }
+
   videoDialog.showModal();
   memoryVideo.play().catch(() => {});
 });
@@ -39,6 +49,9 @@ videoDialog.addEventListener("close", () => memoryVideo.pause());
 videoContinue.addEventListener("click", () => {
   memoryVideo.pause();
   videoDialog.close();
+});
+
+comeHereButton.addEventListener("click", () => {
   document.body.classList.add("leaving");
-  window.setTimeout(() => window.location.assign("./cake.html"), 360);
+  window.setTimeout(() => window.location.assign("./muah.html"), 360);
 });

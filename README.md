@@ -11,6 +11,7 @@ All website files live in `docs/` and each page has its own HTML, CSS, and JavaS
 - `surprise.html`, `surprise.css`, `surprise.js` - playful surprise question and flower popup
 - `gift.html`, `gift.css`, `gift.js` - tap the birthday gift
 - `wish.html`, `wish.css`, `wish.js` - unlock three love boxes to open the final box
+- `muah.html`, `muah.css`, `muah.js` - full photo reveal after every memory is opened
 - `cake.html`, `cake.css`, `cake.js` - blow out the candle
 - `finale.html`, `finale.css`, `finale.js` - birthday finale and confetti
 - `shared.css` - visual styles shared by every page

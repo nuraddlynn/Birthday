@@ -2,7 +2,7 @@
 
 .wish-stage {
   align-content: center;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto;
 }
 
 .wish-stage .scene-copy h1 {
@@ -114,6 +114,27 @@
   background: rgba(121, 242, 192, 0.14);
   box-shadow: 0 0 2.4rem rgba(121, 242, 192, 0.22);
   animation: unlockPulse 650ms ease;
+}
+
+.come-here-button {
+  min-width: 10rem;
+  min-height: 3.2rem;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  background: var(--gold);
+  color: #27170d;
+  font-weight: 900;
+  opacity: 0;
+  transform: translateY(0.7rem);
+  transition:
+    opacity 260ms ease,
+    transform 260ms ease;
+}
+
+.come-here-button.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .video-dialog {
