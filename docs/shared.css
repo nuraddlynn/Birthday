@@ -180,6 +180,12 @@ input:focus {
   font-size: 0.9rem;
 }
 
+.spark-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
 .spark-field::before,
 .spark-field::after {
   content: "";
