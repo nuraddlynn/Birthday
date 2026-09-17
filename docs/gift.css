@@ -1,5 +1,6 @@
 @import url("./shared.css");
 
 .tap-stage {
-  grid-template-rows: auto auto auto;
+  align-content: center;
+  grid-template-rows: auto auto;
 }
