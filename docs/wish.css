@@ -83,6 +83,15 @@
   object-position: center 9%;
 }
 
+.standing-box .memory-reveal span {
+  font-size: clamp(0.62rem, 2vw, 0.72rem);
+}
+
+.standing-box .memory-reveal img {
+  object-fit: cover;
+  object-position: center 66%;
+}
+
 .memory-box.opened .box-icon {
   opacity: 0;
   transform: scale(0.75);
