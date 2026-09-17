@@ -3,24 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Choose a Wish | Birthday Surprise</title>
+    <title>Pilih Mana Duluu | Birthday Surprise</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23131b3a'/%3E%3Cpath d='M18 30h28v22H18z' fill='%23ffcf66'/%3E%3Cpath d='M14 24h36v10H14z' fill='%23ff6f91'/%3E%3Cpath d='M32 24v28' stroke='%23131b3a' stroke-width='4'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./wish.css" />
-    <script src="./wish.js" defer></script>
+    <script src="./wish.js?v=2" defer></script>
   </head>
   <body>
     <main class="app" aria-live="polite">
       <section class="stage wish-stage active">
         <div class="scene-copy">
-          <p class="eyebrow">Step 2</p>
-          <h1>Choose a wish</h1>
-          <p>Pick the one you want to send into the sky.</p>
+          <h1>Pilih nak tengok mana duluu</h1>
+          <p>Buka tiga yang lain baru boleh unlock lagi satu tuu</p>
         </div>
-        <div class="wish-grid" role="list">
-          <button type="button" data-wish="Joy that follows you around.">Joy</button>
-          <button type="button" data-wish="A calm heart and loud laughter.">Peace</button>
-          <button type="button" data-wish="Good news arriving right on time.">Luck</button>
-          <button type="button" data-wish="A year that feels kind to you.">Love</button>
+        <div class="wish-grid" aria-label="Love surprise boxes">
+          <button class="love-box" type="button" data-love aria-label="Buka love pertama">
+            <span class="box-icon" aria-hidden="true">&#10084;&#65039;</span>
+          </button>
+          <button class="love-box" type="button" data-love aria-label="Buka love kedua">
+            <span class="box-icon" aria-hidden="true">&#10084;&#65039;</span>
+          </button>
+          <button class="love-box" type="button" data-love aria-label="Buka love ketiga">
+            <span class="box-icon" aria-hidden="true">&#10084;&#65039;</span>
+          </button>
+          <button class="final-box" type="button" disabled aria-label="Box terakhir masih locked">
+            <span class="box-icon" data-final-icon aria-hidden="true">&#128274;</span>
+          </button>
         </div>
       </section>
     </main>
