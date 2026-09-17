@@ -1,6 +1,5 @@
 const giftButton = document.querySelector(".gift-button");
 const encouragement = document.querySelector(".encouragement");
-const notes = ["spark", "wish", "smile", "almost", "ready"];
 const requiredTaps = 100;
 let giftTaps = 0;
 
@@ -18,7 +17,7 @@ giftButton.addEventListener("click", (event) => {
   giftTaps += 1;
   giftButton.classList.remove("pulse");
   window.requestAnimationFrame(() => giftButton.classList.add("pulse"));
-  showNote(notes[(giftTaps - 1) % notes.length], event.clientX, event.clientY);
+  showNote("\u2764\uFE0F", event.clientX, event.clientY);
 
   if (giftTaps === 50) {
     encouragement.textContent = "cepat cepat, sikitt lagiiii";
