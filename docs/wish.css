@@ -10,9 +10,11 @@
 }
 
 .wish-grid button {
+  position: relative;
   display: grid;
   place-items: center;
-  min-height: 7rem;
+  min-height: clamp(9rem, 22svh, 11rem);
+  overflow: hidden;
   transition:
     background 220ms ease,
     border-color 220ms ease,
@@ -44,6 +46,48 @@
 
 .love-box.opened .box-icon {
   transform: scale(1.24);
+}
+
+.memory-reveal {
+  position: absolute;
+  inset: 0.55rem;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 0.45rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.94);
+  transition:
+    opacity 240ms ease,
+    transform 280ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    visibility 0ms linear 280ms;
+}
+
+.memory-reveal img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  object-fit: contain;
+}
+
+.memory-reveal span {
+  color: var(--ink);
+  font-size: clamp(0.72rem, 2.5vw, 0.85rem);
+  line-height: 1.2;
+}
+
+.memory-box.opened .box-icon {
+  opacity: 0;
+  transform: scale(0.75);
+}
+
+.memory-box.opened .memory-reveal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition-delay: 80ms;
 }
 
 .final-box:disabled {

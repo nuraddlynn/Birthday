@@ -10,7 +10,7 @@ loveBoxes.forEach((button) => {
     }
 
     button.classList.add("opened");
-    button.setAttribute("aria-label", "Love sudah dibuka");
+    button.setAttribute("aria-label", button.dataset.openLabel || "Love sudah dibuka");
     openedBoxes += 1;
 
     if (openedBoxes === loveBoxes.length) {
